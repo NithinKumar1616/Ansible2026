@@ -2,11 +2,11 @@
   hosts: database
   become: yes
   tasks:
-  - name: Instal mysql
-    community.mysql.mysql_db:
-      name: mysql
-      state: present
   - name: Install Python MySQL dependency
     yum:
         name: python3-PyMySQL
         state: present
+  - name: Instal mysql
+    community.mysql.mysql_db:
+      name: mysql
+      state: present
