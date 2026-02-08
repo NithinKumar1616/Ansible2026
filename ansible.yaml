@@ -1,0 +1,7 @@
+- name: Installing service
+  hosts: database
+  become: yes
+  tasks:
+  - name: Instal and start Mysql
+    community.mysql.mysql_db:
+    
