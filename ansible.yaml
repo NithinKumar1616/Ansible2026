@@ -2,8 +2,8 @@
   hosts: database
   become: yes
   tasks:
-  - name: Instal and start Mysql
+  - name: Instal mysql
     community.mysql.mysql_db:
-    name: Mysql
+    name: mysql
     state: present
     
