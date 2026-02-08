@@ -6,7 +6,6 @@
     yum:
         name: python3-PyMySQL
         state: present
-  - name: Instal mysql
-    community.mysql.mysql_db:
-      name: mysql
+  - name: Instal mysql server
+      name: mysql-server
       state: present
