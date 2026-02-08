@@ -1,11 +1,25 @@
-- name: Installing service
+- name: Install and configure MySQL
   hosts: database
   become: yes
+
   tasks:
-  - name: Install Python MySQL dependency
-    yum:
+    - name: Install MySQL server
+      yum:
+        name: mysql-server
+        state: present
+
+    - name: Start and enable MySQL service
+      service:
+        name: mysqld
+        state: started
+        enabled: yes
+
+    - name: Install Python MySQL dependency
+      yum:
         name: python3-PyMySQL
         state: present
-  - name: Instal mysql server
-    name: mysql-server
-    state: present
+
+    - name: Create MySQL database
+      community.mysql.mysql_db:
+        name: mysql
+        state: present
