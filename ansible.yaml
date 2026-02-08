@@ -4,4 +4,6 @@
   tasks:
   - name: Instal and start Mysql
     community.mysql.mysql_db:
+    name: Mysql
+    state: present
     
