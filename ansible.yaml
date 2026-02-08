@@ -6,4 +6,7 @@
     community.mysql.mysql_db:
       name: mysql
       state: present
-    
+  - name: Install Python MySQL dependency
+    yum:
+        name: python3-PyMySQL
+        state: present
