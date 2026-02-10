@@ -1,0 +1,3 @@
+BACKEND_HOST: backend.galaxieos.com
+APP_LOCAION: /usr/share/nginx/html
+COMPONENT: frontend
